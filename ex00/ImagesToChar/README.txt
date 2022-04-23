@@ -1,5 +1,5 @@
 # We need target directory for compilation
-mkdir target
+mkdir -p target
 
 # '-d' define *.class store folder - './target/'
 # 'src/java/edu/school21/printer/*/*.java' - is path to source *.java files
