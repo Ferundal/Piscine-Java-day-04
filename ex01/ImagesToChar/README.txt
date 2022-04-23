@@ -11,10 +11,10 @@ cp -R src/resources target/.
 # 'cmf' - "create archive" "path to manifest.txt" "output file name"
 # '-C ./target' - root directory for archive sources is ./target
 # '.' everything in this folder will be added
-jar cmf src/manifest.txt images-to-chars-printer.jar -C ./target .
+jar cmf src/manifest.txt ./target/images-to-chars-printer.jar -C ./target .
 
 # Change privileges to file to make it executable
-chmod v+x ./target/images-to-chars-printer.jar
+chmod u+x ./target/images-to-chars-printer.jar
 
 # '-jar' - run jar archive
 # './target/images-to-chars-printer.jar' - archive path
