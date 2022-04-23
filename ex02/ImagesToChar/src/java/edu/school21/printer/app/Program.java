@@ -6,12 +6,9 @@ import java.awt.image.BufferedImage;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameters;
-import com.sun.tools.javac.Main;
 import edu.school21.printer.logic.Painter;
 import edu.school21.printer.logic.WrongImageFileFormat;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.beust.jcommander.Parameter;
 
