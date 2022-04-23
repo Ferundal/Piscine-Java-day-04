@@ -1,5 +1,8 @@
 # We need target directory for compilation
-mkdir -p target
+mkdir -p target lib
+
+# Copy libs from resources because lib is not allowed. It is dramatically STUPID
+cp ./src/resources/*.jar ./lib
 
 # '-d' define *.class store folder - './target/'
 # 'src/java/edu/school21/printer/*/*.java' - is path to source *.java files
@@ -15,6 +18,9 @@ cd ..
 
 # copy resources to jar folder
 cp -R src/resources target/.
+
+# For repacking
+rm -f ./target/images-to-chars-printer.jar
 
 # 'cmf' - "create archive" "path to manifest.txt" "output file name"
 # '-C ./target' - root directory for archive sources is ./target
