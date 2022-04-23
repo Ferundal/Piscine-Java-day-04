@@ -6,8 +6,12 @@ mkdir -p target
 # libs include in form '.:<file_1_name>.jar:<file_2_name>.jar'
 javac -cp .:./lib/JColor-5.0.0.jar:./lib/jcommander-1.78.jar -d ./target/ src/java/edu/school21/printer/*/*.java
 
+cd target
+
 # Unpack .jar items in target folder
-jar xf ./lib/JColor-5.0.0.jar target/com ; jar xf ./lib/jcommander-1.78.jar target/com
+jar xf ./../lib/JColor-5.0.0.jar com ; jar xf ./../lib/jcommander-1.78.jar com
+
+cd ..
 
 # copy resources to jar folder
 cp -R src/resources target/.
