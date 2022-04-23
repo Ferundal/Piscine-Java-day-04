@@ -3,7 +3,11 @@ mkdir -p target
 
 # '-d' define *.class store folder - './target/'
 # 'src/java/edu/school21/printer/*/*.java' - is path to source *.java files
-javac -d ./target/ src/java/edu/school21/printer/*/*.java
+# libs include in form '.:<file_1_name>.jar:<file_2_name>.jar'
+javac -cp .:./lib/JColor-5.0.0.jar:./lib/jcommander-1.78.jar -d ./target/ src/java/edu/school21/printer/*/*.java
+
+# Unpack .jar items in target folder
+jar xf ./lib/JColor-5.0.0.jar target/com ; jar xf ./lib/jcommander-1.78.jar target/com
 
 # copy resources to jar folder
 cp -R src/resources target/.
@@ -19,4 +23,4 @@ chmod u+x ./target/images-to-chars-printer.jar
 # '-jar' - run jar archive
 # './target/images-to-chars-printer.jar' - archive path
 # '. 0' -command line arguments
-java -jar ./target/images-to-chars-printer.jar . 0
+java -jar ./target/images-to-chars-printer.jar --white=RED --black=GREEN
